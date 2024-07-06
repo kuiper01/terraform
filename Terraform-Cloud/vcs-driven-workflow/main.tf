@@ -52,3 +52,13 @@ resource "aws_vpc" "demovpc" {
     Name = "Demo-VPC"
   }
 }
+
+
+resource "aws_iam_user" "workshop-user" {
+  name = "workshop-user"
+  path = "/system/"
+
+  tags = {
+    tag-key = "workshop-user"
+  }
+}
